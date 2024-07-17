@@ -16,3 +16,8 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:latest
     - name: Save Docker image to local file
       run: docker save -o your-image-name.tar my-image-name:latest
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: docker-image
+        path: ./your-image-name.tar
