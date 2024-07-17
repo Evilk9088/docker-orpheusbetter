@@ -5,7 +5,7 @@ WORKDIR /
 RUN groupadd -g 1000 orpheus && useradd -u 1000 -g orpheus -d /config orpheus && \
     apt-get update && \
     apt-get install -y --no-install-recommends git mktorrent flac lame sox && \
-    git clone https://github.com/ApexWeed/orpheusbetter-crawler
+    git clone https://github.com/BFourcin/orpheusbetter-crawler
 
 WORKDIR /orpheusbetter-crawler
 
